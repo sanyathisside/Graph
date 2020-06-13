@@ -83,4 +83,25 @@ Minimum edges(connected graph): (N-1)edges (tree)
  
 <hr/>
 
-## Cycle detection in graph
+## Cycle detection in directed graph
+*Check for cycle in directed graph.*
+ * If a graph has back edge, it contains cycle.
+ * We can maintain a stack(for path traversed, but implemented as array to make look up possible at O(1)) and a visited array.
+ * <a href="https://github.com/sanya2508/Graph/blob/master/cycle%20detection%20in%20directed%20graph.cpp">Using DFS.</a>
+
+<hr/>
+
+## <a href="https://github.com/sanya2508/Graph/tree/master/Flood%20Fill">Flood Fill Algorithm</a>
+ * A simple variant of BFS/DFS that can be used to label(color) the various connected components present in a graph.
+ * It is generally performed on implicit graphs (2d matrices).
+ * Starting from a particular cell, we call DFS on the neighbouring cell to color them.
+
+<hr/>
+
+## Dijkstra Algorithm
+ * An alogrithm that helps us to find the shortest path on the weighted graph.
+ * No negative weight cycle.
+ * Single source shortest path. (SSSP)
+ * Initially all the nodes have let infinite distance. 
+ * Pick the node with minimum given weight. (use a priority queue or set, but since we can't update in a priority queue we will prefer set).
+ * 
