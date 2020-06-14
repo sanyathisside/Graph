@@ -104,4 +104,36 @@ Minimum edges(connected graph): (N-1)edges (tree)
  * Single source shortest path. (SSSP)
  * Initially all the nodes have let infinite distance. 
  * Pick the node with minimum given weight. (use a priority queue or set, but since we can't update in a priority queue we will prefer set).
+
+
+<hr/>
+
+## Disjoint Set Data Structure and Union Find Algo
  * 
+ 
+## Cycle detection using DSU
+ * If we add an edge within the connected  components there will be cycle.
+
+<hr/>
+
+## Kruskal's Concept (Minimum spanning tree)
+ * A `spanning tree` is a tree of graph that connects the graph into one connected components withput any cycle.
+ * A `minimum spanning tree` is a subset of the edges of a connected, edge-weighted undirected graph that connects all the vertices together, without any cycles and with the minimum possible total edge weight.
+ * Steps:
+    * Sort all the edges according to their weights.
+    * Add the edge in the graph such that it forms no cycle. (Greedy :P)
+    
+
+<hr/>
+
+## Prim's Concept (Minimum spanning tree)
+ * Active edge: If an edge is an active edge, then either of one vertex is a MST vertex. (points MST vertex to a non MST vertex).
+ * MST edge: Edge that is included in the MST.
+ * MST vertex: Vertex that is included in the MST.
+ * Prim's algorithm is greedy algorithm and similar to Dijkstra's.
+ * Steps: (We can make a priority queue for better time complexity).
+    * Select source vertex (any vertex from the graph). (x)
+    * Out of all the active edges choose the one with the smallest weight.(x---y) x:MST vertex, y: non MST vertex
+    * Make all edges of y to be active edges.
+    * Repeat steps 2 and 3.
+    
