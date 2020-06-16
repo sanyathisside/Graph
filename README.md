@@ -137,3 +137,47 @@ Minimum edges(connected graph): (N-1)edges (tree)
     * Make all edges of y to be active edges.
     * Repeat steps 2 and 3.
     
+
+<hr/>
+
+## Bellman Ford Algorithm
+ * Single source shortest path algorithm.
+ * Also handles negative weight edges.
+ * Why not Dijkstra? Because dijkstra works for only positive weighted edge.
+ * Directed graph, because if there'll be undirected graph then for negative weight it will creat a negative weight cycle.
+ * It works in a dynamic programming way.
+ * Relaxing the edge.
+ * Steps:
+    * 1. dist[src]=0
+           * dist[other]=inf
+    * 2. relax all edges. (n-1) times
+           * rep (n-1) ---> O(n-1)
+           * rep (m) ---> O(m)
+           * relax (u,v) ---> O(1)
+    * 3. Check if we can relax an edge any furhter.
+           * If yes, it contains a negative edge cycle.
+
+<hr/>
+
+## Floyd-Warshall Algorithm
+ * Used to find shortest path between all pairs of vertcies (directed as well as undirected)
+ * Will work even if negative edges are present.
+ * Will also be able to detect negative cycles.
+ * Time complexity: O(V^3)
+ * Space complexity: O(V^2)
+ 
+ <hr/>
+
+## <a href="https://github.com/sanya2508/Graph/blob/master/travelling%20salesman%20problem.cpp">Travelling salesman problem</a>
+ * DP with bitmasking (Top down)
+ * `Hamiltonian cycle`: Set of edges such that every node is visited once and reach back to starting node.
+ * This que will be a min weight Hamiltonian cycle.
+ * Brute force: Generate all n fact. of the given node and try to find the path of the cycle. O(n!)
+ 
+
+<hr/>
+
+## Strongly connected components (Kosaraju's algorithm)
+ * `Strongly conencted graph`: Directed graph such that each of it's vertices can be visited from other vertices. (There is a path between every two vertices).
+ * If we can go from source to sink, and then reverse the graph and again go from source to sink then it is a strongly connected components.
+ 
