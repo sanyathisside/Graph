@@ -73,3 +73,9 @@
  * #### Kosaraju’s Strongly Connected Component Algorithm: `to find in O(V+E) time.`
  * ### KOSARAJU ALGORITHM:
  
+
+## Transitive Closure of a Graph
+  * Given a directed graph, find out if a vertex v is reachable from another vertex u for all vertex pairs (u, v) in the given graph. The reach-ability matrix is called transitive closure of a graph.
+    * Solution:
+       * O(V^3) based on `Floyd Warshall Algorrithm.`
+       * O(V^2) using dfs.
