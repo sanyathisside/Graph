@@ -43,6 +43,25 @@
  
 <hr/>
 
+## Graph representation using set hash: 
+ * Using set:
+    * Pros: 
+        * Queries like whether there is an edge from vertex u to vertex v can be done in O(log V).
+    * Cons: 
+        * Adding an edge takes O(log V), as opposed to O(1) in vector implementation.
+        * Graphs containing parallel edge(s) cannot be implemented through this method.
+        
+        
+
+ * Using unordered set (hashing):
+    * Pros:
+        * Queries like whether there is an edge from vertex u to vertex v can be done in O(1).
+        * Adding an edge takes O(1).
+    * Cons:
+        * Graphs containing parallel edge(s) cannot be implemented through this method.
+        * Edges are not stored in any order.
+
+<hr/>
 
 ## Mother Vertex
  * A mother vertex in a graph G = (V,E) is a vertex v such that all other vertices in G can be reached by a path from v.
