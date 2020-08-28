@@ -17,9 +17,11 @@
   1. 2D Array (Adjacency Matrix)
      * Directed egde
      * Undirected edge (Bidirected edge)
+     * Advantages:
+        * Searching: O(1)
      * Disadvantages:
-        * Searching: O(n^2)
-        * Neighbours: O(n)
+        * To store all the edges it will take O(n^2).
+        * Finding neighbours will take O(n) time.
 
      
   2. Edge List (Edges and Vertices)
@@ -36,7 +38,7 @@ Maximum edges: NC2
 
 Minimum edges: 0
 
-Minimum edges(connected graph): (N-1)edges (tree)
+Minimum edges(connected graph): (N-1)edges (Example: tree)
 
 <hr/>
 
